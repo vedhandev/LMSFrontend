@@ -1,0 +1,29 @@
+<div class="container">
+<div class="card text-center " >
+   
+    <div class="card-body">
+      <h4 class="card-title">Login</h4>
+     
+      <div class="form-group">
+       
+        <input type="text" required  [(ngModel)]="user.name" name="uname" class="form-control" placeholder="UserId">
+      </div>
+      <div class="form-group">
+       
+        <input type="password" required [(ngModel)]="user.password" name="sdf" class="form-control" placeholder="Password">
+      </div>
+      <div class="form-group" *ngIf="showCredentialsError">
+        <div class="row">
+        <div class="col-md-12">
+          <label class="pl-3 float-left red">* Invalid Credentials</label>
+        </div>
+        </div>
+    </div>
+    <div>
+      <button type="button" mat-raised-button class="btn btn-success" (click)="onSubmit()">Submit</button>
+      <button  type="button" mat-raised-button class="btn btn-warning" (click)="onCancel()">Cancel</button>
+    </div>
+  
+    </div>
+  </div>
+</div>
